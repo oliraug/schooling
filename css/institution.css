@@ -1,0 +1,147 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	font-family: calibri;
+	color: #333333;
+	line-height: 1.166;	
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+	font-style: italic;
+	color: #00ff00;
+}
+a{margin:2% 0 0 10%;width:25%;background-color:#FF0000; border-radius:5em; text-align:center; line-height:5; text-decoration:none;}
+
+p{  
+	font-size:0.9em;
+}
+
+#header{
+	margin: 20px 0;
+	border-radius: 5em;
+	width: 40%;
+	padding: 15px;
+	visibility:visible;
+	clear:both;
+    }
+
+.institution-form{
+	position: fixed;
+	left:25%; top:5%;
+	width:40%; height:50%;
+    font-weight: bold;
+    font-family: calibri;
+    border: outset red 4px; 
+    display: inline-block; 
+    font-size: 18px; 
+    float:right;
+ }
+
+.institution-form span{
+    display: table;
+    padding: 3px;
+    text-align: center;
+    font-family: calibri;
+ }
+
+.institution-form .input{
+	height: 35px;
+	width: 350px;
+}
+
+.institution-form .line{
+	width: 100%;
+
+}
+
+.institution-form .content-field{
+	width: 100%;
+}
+
+.institution-form label{
+	margin:0 0 3px 0;
+    padding:10px;
+    display:inline-block;
+    font-weight: bold;
+    position: relative;
+	}
+
+#header > div{
+	position:relative;
+	margin-left: auto;  
+	margin-right: auto;  
+	width: 980px;
+}
+
+.institution-form input[type=text],
+.institution-form input[type=date],
+.institution-form input[type=datetime],
+.institution-form input[type=search],
+.institution-form input[type=time],
+.institution-form input[type=url]
+{
+    border: solid green 3px;
+    padding: 2px;
+    margin:0px;
+    line-height: 25px;
+    clear: both;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+border-radius:5em;	
+}
+
+.institution-form input[type=text]:focus,
+.institution-form input[type=date]:focus,
+.institution-form input[type=datetime]:focus,
+.institution-form input[type=search]:focus,
+.institution-form input[type=time]:focus,
+.institution-form input[type=url]:focus
+{
+    -moz-box-shadow: 0 0 8px #FF0000;
+    -webkit-box-shadow: 0 0 8px #FF0000;
+    box-shadow: 0 0 8px #0000FF;
+    border: solid #FF0000 3px;
+}
+
+.institution-form input[type=submit], .institution-form input[type=button]{
+    background: #FF00FF;
+    padding: 6px 10px 6px 10px;
+    border: none;
+    color: #fff;
+	border-radius:5em;
+	cursor:pointer;
+}
+.institution-form input[type=submit]:hover, .institution-form input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.institution-form .label{
+	display: inline-block;
+	clear:both; 
+}
+
+.institution-form #form1{float: center;}
+#footer{
+	background-color:#FFA500;
+	margin:1px 1px 2px 450px; 
+	font-family:calibri; 
+	font-size: 16px; 
+	font-weight: bold; 
+	font-style:italic; 
+	padding:0px;
+	clear: both;
+	position:fixed;
+	bottom:30px;
+	-moz-border-radius:0 5px 5px 0;        
+	-webkit-border-radius:0 5px 5px 0; 
+	border-radius: 20px;    
+}
+

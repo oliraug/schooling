@@ -1,0 +1,97 @@
+
+body,html{background-color:whitesmoke;}
+#main {
+width:660px;
+margin:2px 2px 5px 450px;
+font-family:raleway;
+}
+span {
+color:red
+}
+h1,h2,h3 {font-family:arial; font-style:italic; color:#FF00CC; text-align:center; margin:-15% 0 0 4%; padding:1px;}
+label{border:0; margin:10px 10px; margin-bottom:30px}
+#register{margin:45% 0 0 45%;width:10%;background-color:#00FFCC; border-radius:5em; text-align:center;line-height:2;  padding: 8px 15px 8px 15px;}
+#login {
+width:300px;background-color:#fff;
+float:left;
+border-radius:30%;
+font-family:raleway;
+border:2px solid #00ffCC;
+padding:10px 40px 25px;
+margin-top:70px
+}
+input[type=text],input[type=password] {
+width:99.5%;
+padding:10px;
+margin-top:8px;
+border:1px solid #FFA500;
+padding-left:5px;
+font-size:16px;
+font-family:raleway;
+border-radius:5em;
+}
+input[type=text]:focus,input[type=password]:focus{
+-moz-box-shadow: 0 0 8px #FFFF00;
+    -webkit-box-shadow: 0 0 8px #FFFF00;
+    box-shadow: 0 0 8px #FFFF00;
+    border: solid #00FF00 3px;
+     width:360px;	
+}
+input[type=submit] {
+width:100%;
+background-color:#FFA500;
+color:#00FF00;
+border:2px solid #111;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5em;
+margin-bottom:1px
+}
+input[type=submit]:hover, input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+a {text-decoration:none; color:#111;}
+i {color:#6495ed;}
+#logo{height: 150px;border-radius:55%;
+  width: 150px;
+  margin: 2px auto 31px;
+  background-image: url("../images/olira.png");
+  background-size: 150px auto;
+  background-position: center center;
+  background-repeat: no-repeat;}
+ /* These CSS styles all apply to the SVG elements defined below */
+#clock { /* styles for everything in the clock */
+stroke: #FF0000; /* orange lines */
+stroke-linecap: round; /* with rounded ends */
+fill: #000; /* on a black background */
+margin:3% 0 0 2%;
+width:40%;
+}
+#face { stroke-width: 8px;} /* clock face outline */
+#ticks { stroke-width: 2px; } /* lines that mark each hour */
+#hourhand {stroke-width: 5px;} /* wide hour hand */
+#minutehand {stroke-width: 3px;} /* narrow minute hand */
+#numbers { /* how to draw the numbers */
+font-family: calibri; font-size: 7pt; font-weight: bold;
+text-anchor: middle; stroke: none; fill: red;
+}
+#footer{
+	background-color:#FFA500;
+	margin:1px 1px 2px 450px; 
+	font-family:calibri; 
+	font-size: 16px; 
+	font-weight: bold; 
+	font-style:italic; 
+	padding:0px;
+	clear: both;
+	position:fixed;
+	bottom:30px;
+	-moz-border-radius:0 5px 5px 0;        
+	-webkit-border-radius:0 5px 5px 0; 
+	border-radius: 20px;    
+}

@@ -1,0 +1,127 @@
+@CHARSET "ISO-8859-1";
+
+.invites{
+	margin:60px auto;
+    max-width: 600px;
+    padding: 20px 12px 10px 20px;
+    font: 16px calibri;
+    border:solid black 3px;
+	border-radius:1.5em;
+	}
+	
+	.invites table,th,tr,td,thead,tbody{
+	margin:10px auto;
+    max-width: 80px;
+    padding: 2px 2px 1px 2px;
+    font: 13px calibri;
+	}
+	
+	.invites label{
+	margin:0 0 3px 0;
+    padding:10px;
+    display:inline-block;
+    font-weight: bold;
+	}
+	.invites .table th{text-align:right;}
+	.invites .input{
+	height: 30px;
+	width: 350px;
+}
+	
+	h1{
+	font-style: italic;
+	text-align:center;
+	margin:1% 0 0 0;
+	}
+	
+.invites input[type=text],
+.invites input[type=date],
+.invites input[type=datetime],
+.invites input[type=number],
+.invites input[type=search],
+.invites input[type=time],
+.invites input[type=url],
+.invites input[type=email],
+select{
+    width: 450px;
+    border: solid orange 3px;
+    padding: 18px;
+    margin:0px;
+	box-sizing: border-box;
+	/* background-image: url('http://localhost/oliraug/school/2017/media/thumbnails/searchicon.png');*/
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+	border-radius:5em;	
+}
+
+.invites input[type=text]:focus,
+.invites input[type=date]:focus,
+.invites input[type=datetime]:focus,
+.invites input[type=number]:focus,
+.invites input[type=search]:focus,
+.invites input[type=time]:focus,
+.invites input[type=url]:focus,
+.invites input[type=email]:focus,
+.invites select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: solid #88D5E9 3px;
+}
+
+.invites input[type=submit], .invites input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+	border-radius:5em;cursor:pointer;
+}
+.invites input[type=submit]:hover, .invites input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+a{margin:2% 0 0 10%;width:25%;background-color:#FF00FF; border-radius:5em; text-align:center; line-height:5; text-decoration:none;}
+
+
+.example-animate-container {
+  background:white;
+  margin:0 0 0 30%;
+  padding:0 10px;
+}
+
+.animate-repeat {
+  line-height:30px;
+  list-style:none;
+  box-sizing:border-box;
+  visibility;visible;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}
+
+
+

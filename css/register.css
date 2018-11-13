@@ -1,0 +1,151 @@
+@CHARSET "ISO-8859-1";
+
+/* Register and Login */
+body,html{font-family:Arial,Georgia,"Times New Roman",Times,serif; font-size:14px; color:#000000;font-weight:bold;
+background-image: url("http://localhost/oliraug/school/2017/images/nature.jpg"); height: 90%; background-position: center;background-repeat: no-repeat;background-size:cover;width:90%;background-attachment: fixed !important;}
+.olira-container #Logo{margin:0% 0% 1% -35%;border-radius:50%;}
+a img{border:none;}
+h1, h2{
+	font-style: italic;
+	text-align:center;
+	font-family:monotype corsiva;
+	color: #0000FF;
+	}
+
+.register-form label{color:#32CD32;}
+
+.register-form{
+	margin:10px 1px 2px 15px;
+    padding: 5px 2px 5px 2px;
+    font: 16px calibri;
+    -moz-border-radius:0 5px 5px 0;        
+    -webkit-border-radius:0 5px 5px 0;
+    border-radius: 10px; 
+display:inline-block;
+position:relative;    
+    }
+
+
+.register-form input[type=text],
+.register-form input[type=password],
+.register-form input[type=date],
+.register-form input[type=datetime],
+.register-form input[type=number],
+.register-form input[type=search],
+.register-form input[type=time],
+.register-form input[type=url],
+.register-form input[type=email],
+select{
+    
+    border: solid black 3px;
+    padding: 8px;
+	border-radius: 1.5em;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+
+.register-form input[type=text]:focus,
+.register-form input[type=password]:focus,
+.register-form input[type=date]:focus,
+.register-form input[type=datetime]:focus,
+.register-form input[type=number]:focus,
+.register-form input[type=search]:focus,
+.register-form input[type=time]:focus,
+.register-form input[type=url]:focus,
+.register-form input[type=email]:focus,
+.register-form select:focus{
+    -moz-box-shadow: 0 0 8px #FFFF00;
+    -webkit-box-shadow: 0 0 8px #FFFF00;
+    box-shadow: 0 0 8px #FFFF00;
+    border: solid #00FF00 3px;
+     width:360px;
+}
+
+.register-form input[type=submit], .register-form input[type=button]{
+    background: #00FFCC;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #111;
+	cursor:pointer;    
+}
+.register-form input[type=submit]:hover, .register-form input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.register-form .input{
+	height:30px;
+	width:350px;
+			
+}
+
+.register-form .inline{
+	display: inline-block;
+	clear:both; 
+}
+
+#form .register-form #register strong{
+	display:table;
+    font-size:16px;
+    margin-bottom:10px;
+}
+#clock{
+	float: left;
+	width: 40%;
+	margin:10% 0% 1% 3%;
+	padding: 0px;
+	clear: both;
+}
+
+#footer{
+	background-color:#FFA500;
+	margin:1px 1px 2px 450px; 
+	font-family:calibri; 
+	font-size: 16px; 
+	font-weight: bold; 
+	font-style:italic; 
+	padding:0px;
+	clear: both;
+	position:fixed;
+	bottom:30px;
+	-moz-border-radius:0 5px 5px 0;        
+	-webkit-border-radius:0 5px 5px 0; 
+	border-radius: 20px;    
+}
+
+#registration{
+	left:20%;
+	width: 50%;height:50%;
+	margin: 20px; line-height:2px;
+	padding: 0px;
+	bottom:80px;
+}
+
+table,tr,td{  
+	/*border:0;  
+	outline:0; 
+	font-weight:bold;  
+	font-style:inherit;  
+	font-size:100%;  
+	font-family:calibri;  
+	margin:0;  
+	padding:0;
+	border-collapse:separate;  
+	border-spacing:0;*/
+}
+
+#register .btn{
+	font-size: 16px;
+    font-weight: bold;
+    padding: 8px !important;
+    float: center;
+	border-radius: 1.5em;
+}
+a{margin:0 0 0 10%;width:15%;background-color:#00FFCC; border-radius:5em; text-align:center; line-height:1.5;left:15%;text-decoration:none;}
+    

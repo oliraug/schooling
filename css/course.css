@@ -1,0 +1,148 @@
+@CHARSET "ISO-8859-1";
+
+body,html{
+	font-family: calibri;
+	color: #333333;
+	line-height: 1.166;	
+	margin: 0px auto;
+	padding: 0px;
+	background-image: url("http://localhost/oliraug/school/2017/media/thumbnails/Hawaii.jpg");
+
+    /* Full height */
+    height: auto; 
+	
+    /* Center and scale the image nicely */
+    background-position: tile tile;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment:fixed;
+}
+
+h1{
+	font-style: italic;
+	color: #00ff00;
+	margin: 1% 0 0 20%;
+}
+
+p{font-size:0.9em;}
+a{margin:2% 0 0 10%;width:25%;background-color:#FF00FF; border-radius:5em; text-align:center; line-height:5; text-decoration:none;}
+
+#header{font-family:raleway; border:2px solid #0000CC; padding:10px 40px 25px; margin-top:70px;
+width:30%; border-radius:25%; visibility:visible;}
+
+.course-form{
+	position: fixed;
+	left:25%; top:0%;
+	width:45%; height:65%;
+    font-weight: bold;
+    font-family: calibri;
+    border: inset blue 4px; 
+    display: inline-block; 
+    font-size: 18px; 
+    float:right;
+ }
+
+.course-form span{
+    display: table;
+    padding: 3px;
+    text-align: center;
+    font-family: calibri;
+ }
+
+.course-form .input{
+	height: 35px;
+	width: 350px;
+	border-radius:5em;
+}
+
+.course-form .line{
+	width: 100%;
+
+}
+
+.course-form .content-field{
+	width: 100%;
+}
+
+.course-form label{
+	margin:0 0 3px 0;
+    padding:10px;
+    display:inline-block;
+    font-weight: bold;
+    position: relative;
+	color:#00FF00;
+	}
+
+#header > div{
+	position:relative;
+	margin-left: auto;  
+	margin-right: auto;  
+	width: 980px;
+}
+
+.course-form input[type=text],
+.course-form input[type=date],
+.course-form input[type=datetime],
+.course-form input[type=search],
+.course-form input[type=time],
+.course-form input[type=url], select
+{
+    border: solid green 3px;
+    padding: 2px;
+    margin:0px;
+    line-height: 25px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+
+.course-form input[type=text]:focus,
+.course-form input[type=date]:focus,
+.course-form input[type=datetime]:focus,
+.course-form input[type=search]:focus,
+.course-form input[type=time]:focus,
+.course-form input[type=url]:focus, select
+{
+    -moz-box-shadow: 0 0 8px #FF0000;
+    -webkit-box-shadow: 0 0 8px #FF0000;
+    box-shadow: 0 0 8px #0000FF;
+    border: solid #FF0000 3px;
+}
+
+.course-form input[type=submit], .course-form input[type=button], select{
+    background: #FF00FF;
+    padding: 6px 10px 6px 10px;
+    border: none;
+    color: #fff;
+	border-radius:45%;
+	width:25%;
+	margin:1% 0 0 20%;
+}
+.course-form input[type=submit]:hover, .course-form input[type=button]:hover, select:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.course-form .label{
+	display: inline-block;
+	clear:both; 
+}
+#footer{
+	background-color:#FFA500;
+	margin:1px 1px 2px 450px; 
+	font-family:calibri; 
+	font-size: 16px; 
+	font-weight: bold; 
+	font-style:italic; 
+	padding:0px;
+	clear: both;
+	position:fixed;
+	bottom:30px;
+	-moz-border-radius:0 5px 5px 0;        
+	-webkit-border-radius:0 5px 5px 0; 
+	border-radius: 20px;    
+}

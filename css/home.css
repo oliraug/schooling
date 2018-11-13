@@ -1,0 +1,179 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+    min-height: 100%;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	background: linear-gradient(to bottom right, #808080, #f5f5f5, #3D4258);
+    line-height: 1.5;
+}
+
+input[type=text],
+input[type=search]
+{
+    border: solid green 3px;
+   -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    outline: none;
+	width: 130px;
+	border-radius:5em;
+	box-sizing: border-box;
+    border: 2px solid #ccc;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+	margin:0 0 0 40%;
+}
+
+input[type=text]:focus,
+input[type=search]:focus
+{
+    -moz-box-shadow: 0 0 8px #FF0000;
+    -webkit-box-shadow: 0 0 8px #FF0000;
+    box-shadow: 0 0 8px #0000FF;
+    border: solid #FF0000 3px;
+	width:100%;
+}
+
+input[type=submit], input[type=button]{
+    background: #00FFFF;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #FFF;
+	border-radius:5em;
+	margin:-15% 0 0 150%;
+}
+input[type=submit]:hover, input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+a{text-decoration:none;}
+textarea{resize:none;}
+nav {
+    background-color:#00CCCC;
+    padding:1px 0;
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+nav ul li {
+    display:inline-block;
+    position:relative;
+}
+
+/* sub navigation */
+nav li ul {    
+    background:linear-gradient(to bottom right, #0000ff, #f5f5f5, #FFA500);
+    position:absolute;
+    left:0;
+    top:20px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+}
+nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+
+/* style all links */
+nav a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+}
+nav a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color:rgb(50,50,50);
+	text-decoration:none;
+}
+
+/* style sub level links */
+nav li li a {
+    border-bottom:solid 1px rgb(200,50,50);
+    margin:0 10px;
+    padding:0;
+}
+nav li li:last-child a {
+    border-bottom:none;
+}
+
+/* show arrows for dropdowns */
+nav li.dropdown > a {
+    background-image:url('../img/arrow-down.png');
+    background-position:right 20px;
+    background-repeat:no-repeat;
+	
+}
+
+nav li li.dropdown > a {
+    background-image:url('../img/arrow-right.png');
+    background-position:right 16px;
+    background-repeat:no-repeat;
+}
+
+/* hide sub menu links */
+ul.sub-menu {
+    display:none;
+}
+
+.dropdown img{margin:1 0 0 150%;}
+.olira-logo img {border-radius:50%; margin:1% auto;}
+.toggler {
+    width: 20%;
+    height: 80%;
+	margin:4% 0 0 3%;
+	padding:.8em;
+  }
+   
+  #effect a, h5{
+    margin: 0;
+    padding: 0.8em;
+    text-align: center;
+  }
+  .accordion {
+    background: linear-gradient(to bottom right, white, #F8F8F8);
+    max-width: 250px;
+	height: 250px;
+    background: white;
+    margin: -42.5% 0 0 65%;
+	border-radius:5%;
+	border: solid 2px #00FFFF;
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+}
+ #friendship {
+    background: linear-gradient(to bottom right, white, #F8F8F8);
+    max-width: 250px;
+	height: 250px;
+    background: white;
+    margin: 5% 0 0 65%;
+	border-radius:5%;
+	border: solid 1px red;
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+}
+.textarea{width:40%; margin: -17.5% 0 0 23.5%;position:fixed;}
+.social_button_area{border-radius:50%; padding: 8px 15px 8px 15px; background:#FFA500;}
+#flow_info {
+  display: none;
+  float:right;
+ }
+
+/*H1t@train.
+Stud3ntp@55 [CoCIS Wireless]
