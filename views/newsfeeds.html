@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PostFeeds</title>
+  <link href="C:/wamp/www/oliraug/school/2017/images/logo.png" rel="icon" type="img/png" sizes="16x16"/>
+  <!--link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://localhost/SpryAssets/jquery.mobile-1.4.5.css"-->
+  <script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/js/jquery-3.2.0.min.js"></script>
+  <link href = "C:/wamp/www/oliraug/school/2017/css/jquery-ui.theme.css" rel = "stylesheet" type="text/css" media="screen,handheld" media="screen and(min-width:40.5em)"/>
+  <script src = "C:/wamp/www/oliraug/school/2017/js/jquery.min.js"></script>
+  <script src = "C:/wamp/www/oliraug/school/2017/js/jquery-ui.js"></script>
+  <!--script src = "C:/wamp/www/Bresittl/app/bootstrap.min.js"></script-->
+  <script src = "C:/node_modules/angular/angular.js"></script>
+  <script src = "C:/node_modules/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/app/CommentController.js"></script>
+  <script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/app/answers.controller.js"></script>
+  <script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/app/register.controller.js"></script>
+  
+<style>
+  .toggler {
+    width: auto;
+    height: auto;
+	margin:5% 0 0 30%;
+  }
+  #button {
+    padding: .5em 1em;
+    text-decoration: none;
+	margin:5% 0 0 30%;
+  }
+  #effect {
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding: 0.4em;
+	
+  }
+  a{text-decoration:none; outline:none; color:#00FFFF; font-family:cursive;}
+  #effect a:hover{color: #FF8C00;}
+  #effect p {
+    border: solid 1px orange;
+	border-radius: 1em;
+	display: inline-block; 
+  }
+   html {
+    min-height: 100%;
+	min-width: 80%;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+    line-height: 1.3;
+}
+#effectTypes{margin:0 0 0 80%; border-radius:5%;}
+.accordion {font-family:Trebuchet MS;
+    max-width: 500px;
+    margin: 0 0 0 -1.5%;
+  }
+
+.accordion-header {
+    border-bottom: 1px solid #DDE0E7;
+    color: #2a313a;
+    cursor: pointer;
+    font-weight: 40;
+ }
+
+.accordion-header:hover {
+    background: #F6F7F9;
+}
+
+.accordion-content {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+	max-width: 500px;
+}
+#comment{width:500px;}
+.accord-header {
+    border-bottom: 1px solid #DDE0E7;
+    color: #2a313a;
+    cursor: pointer;
+    font-weight: 40;
+}
+.friend-tagging {
+    border-bottom: 1px solid #DDE0E7;
+    color: #2a313a;
+    cursor: pointer;
+    font-weight: 40;
+}
+.example-animate-container {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+	max-width: 500px;
+}
+</style>
+ <script>
+  $(function(){
+	  $(".accordion").on("click", ".accordion-header", function() {
+		$(this).toggleClass("active").next().slideToggle();
+ });
+  });
+  </script>
+  <script>
+  $(function(){
+	  $(".accordion").on("click", ".accord-header", function() {
+		$(this).toggleClass("active").next().slideToggle();
+ });
+  });
+  </script>
+   <script>
+  $(function(){
+	  $(".accordion").on("click", ".friend-tagging", function() {
+		$(this).toggleClass("active").next().slideToggle();
+ });
+  });
+  </script>
+</head>
+<body>
+
+<div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+		<select name="effects" id="effectTypes">
+		<option value="blind">Blind</option>
+		<option value="bounce">Bounce</option>
+		<option value="clip">Clip</option>
+		<option value="drop">Drop</option>
+		<option value="explode">Explode</option>
+		<option value="fade">Fade</option>
+		<option value="fold">Fold</option>
+		<option value="highlight">Highlight</option>
+		<option value="puff">Puff</option>
+		<option value="pulsate">Pulsate</option>
+		<option value="scale">Scale</option>
+		<option value="shake">Shake</option>
+		<option value="size">Size</option>
+		<option value="slide">Slide</option>
+		</select>
+ 
+  <hr/>
+    
+    <p>
+      Over 40 recipes to create cloud-ready Java web applications with Spring MVC. Web security testing Mastering python regular expressions ebook dl free download. Penetration Tests; Learn the Attacker's Perspective on Python and PHP. In this article Mastering Web Penetration Testing with Python [eBook]. Over 100 tips and tricks to help you perform generic and custom web applicationpenetration testing using Python. DNS Record Querying For Pentesting. Black Hat Python: Python Programming for Hackers and Pentesters You will learn advance web pentesting techniques including the most devastating methods used in today's hacks. Next, our revamped SEC542: Web Application Penetration Testing, zooms in on In this course, you learn skills that only the most elite penetration testers master : .. Mastering Kali Linux for Advanced PenetrationTesting. Mastering Web Penetration Testing withPython. 
+	  Learning Penetration Testing with Python by Christopher Duffy English | 30 Sept. Read Python Web Penetration Testing Cookbook book reviews & author details In his free time, he loves to travel, break things, and master the art of sarcasm. Learning Web Programming With Python - Training DVD - Tutorial Video Learning Advanced White Hat Hacking and Penetration Testing - Training DVD. Python Web Penetration Testing Cookbook - Sample Chapter In his free time, he loves to travel, break things, and master the art of sarcasm. Python web penetration testing cookbook pdf free it ebooks. DNS Records A Record (Address .Mastering Web Penetration Testing with Python. Web Application Security, Hacking, Windows Security, Cross Site Scripting, SQL Injection, XSS, XXE, XML Run Vulnerability Scans (e.g Identify null sessions, test for LANMAN services e.t.c) . 
+
+    </p>
+	
+	<div class="accordion">
+	 <div class="accordion-header" ng-app='myAnswersController' ng-controller='AnswersController'>Answers</div>
+    <div class="accordion-content">
+<input type="text" ng-model='addAnswer'/>
+<button type="button" ng-click='newAnswer(addAnswer)'>Submit</button>
+
+<ul ng-repeat='answer in answers'>
+	<li>{{answer.value}}{{answer.likes}}
+	<button type="button" ng-click="like(answer)">like</button>
+	<span ng-bind="likes"></span>
+	</li>
+</ul>
+</div>
+	<div class="accord-header" ng-app='myAnswersController' ng-controller='AnswersController'>Discussion</div>
+	<div class="accordion-content">
+		<div id="comment"><input type="text" ng-model='addAnswer'/>
+		<button type="button" ng-click='newAnswer(addAnswer)'>Submit</button></div>
+
+		<ul ng-repeat='answer in answers'>
+			<li>{{answer.value}}{{answer.likes}}
+			<button type="button" ng-click="like(answer)">like</button>
+			<span ng-bind="likes"></span>
+			</li>
+		</ul>
+
+	</div>
+	<div class="friend-tagging"  ng-app='myUserController' ng-controller='RegisterController'>Tag</div>
+	<div class="example-animate-container">
+	<ul>
+	<li class="animate-repeat" ng-repeat="person in persons | filter:q as friends">
+	<input type='checkbox'/>{{person.name}}</li>
+	<li class="animate-repeat" ng-if="friends.length === 0">
+		<strong><small>No friends found...</small></strong>
+		</li>
+	</ul>
+	</div>
+	&nbsp;&nbsp;
+	<a href="#" class="likes">Like</a>&nbsp;&nbsp;
+	<a href="#" class="likes">Share</a>&nbsp;&nbsp;
+	<a href="#" class="likes">Follow</a>
+	
+  </div>
+ </div>
+ </div>
+ 
+  <!--script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script-->
+  <script>
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).hide( selectedEffect, options, 500);
+	   $( "#effect" ).show( selectedEffect, options, 500);
+    };
+ 
+    // Set effect from select menu value
+    $( "#effectTypes" ).click( function() {
+      runEffect();
+    });
+  });
+  </script>
+ </body>
+ </html>

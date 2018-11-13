@@ -1,0 +1,172 @@
+
+<!DOCType html>
+<html>
+<head>
+<base href="http://www.oliraug.com/"/>
+<meta name="Olira" value="notranslate"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href = "C:/wamp/www/oliraug/school/2017/css/jquery-ui.theme.css" rel = "stylesheet" type="text/css" media="screen,handheld" media="screen and(min-width:40.5em)"/>
+<script src = "C:/wamp/www/oliraug/school/2017/js/jquery.min.js"></script>
+<script src = "C:/wamp/www/oliraug/school/2017/js/jquery-ui.js"></script>
+<script src = "C:/node_modules/angular/angular.js"></script>
+<script src = "C:/node_modules/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/app/answers.controller.js"></script>
+<script type="text/javascript" src="C:/wamp/www/oliraug/school/2017/app/post.controller.js"></script>
+<!--script>
+angular.element(document).ready(function(){
+	angular.bootstrap(document, ['myAnswersController']);
+	});
+</script-->
+  <style type="text/css">
+  html {
+    min-height: 100%;
+	min-width: 80%;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+    line-height: 1.3;
+}
+#answer-list{border-radius:2%; border:solid 1px green;width:75%;background-color:whitesmoke;font-family:calibri;color:#FFA500;margin-top:5%;}
+a{text-decoration:none;color:#33CC00;}
+.accordion {font-family:Trebuchet MS;max-width:600px;margin:3% 0 0 18%;top:-5%;}
+
+.accordion-header {border-bottom: 1px solid #DDE0E7;color: #2a313a;cursor: pointer;font-weight:40;}
+.accordion-header:hover {background: #F6F7F9;}
+.accordion-content {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+	max-width: 500px;
+}
+input[type=text]
+{
+    border: solid green 3px;
+    padding: 2px;
+    margin:0px;
+    line-height: 25px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+	border-radius:5em;
+}
+
+input[type=text]:focus
+{
+    -moz-box-shadow: 0 0 8px #FF0000;
+    -webkit-box-shadow: 0 0 8px #FF0000;
+    box-shadow: 0 0 8px #0000FF;
+    border: solid #FF0000 3px;
+}
+
+button[type=submit], button[type=button]{
+    background: #FFCC00;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+	border-radius:5em;
+}
+button[type=submit]:hover, button[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.accordionn {font-family:Trebuchet MS;max-width:100px;margin:-3.5% 0 0 40%;}
+.accordion a{text-decoration:none;color:#00FFFF;}
+.accordion-head {border-bottom: 1px solid #DDE0E7;color: #2a313a;cursor: pointer;font-weight:40;}
+.accordion-head:hover {background: #F6F7F9;}
+.accordion-cont {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+	max-width: 500px;
+}
+.accord {font-family:Trebuchet MS;max-width:600px;margin:-2.5% 0 0 55%;}
+.accordion a{text-decoration:none;color:#00FFFF;}
+.accordion-tag {border-bottom: 1px solid #DDE0E7;color: #2a313a;cursor: pointer;font-weight:40;}
+.accordion-tag:hover {background: #F6F7F9;}
+.accordion-cont {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+	max-width: 500px;
+}
+</style>  
+
+</head>
+<body ng-app='myAnswersController' ng-controller='AnswersController'>
+<div style="margin:5% 0 0 20%;">
+<form name="answerForm" ng-submit='newAnswer(addAnswer)'>
+<input type="text" ng-model='answer.answerBody' placeholder="Add an answer"/>
+<button type="submit" value="submit">Submit</button>
+</form>
+</div>
+<br/>&nbsp;&nbsp;
+<div class="accordion">
+	<div class="row">
+<div ng-show="answer" id="answer-list" ng-repeat='answer in answers'>
+	<h4>{{answer.answerBody}}{{answer.votes}}</h4>
+	<br/>
+	<a href="#" role="button" ng-click="vote(answer)" ng-init="voted='vote'; votes=0"><i class="glyphicon glyphicon-thumbs-up"></i>vote</a>
+	<span ng-bind="votes" role="presentation" aria-hidden="true"></span>
+	<div ng-show="innerAnswer" class="accordion">
+	<a href="javascript:void(0)" class="accordion-header">improve</a>
+	<div class="accordion-content">
+		<form name="improvedAnswersForm" ng-submit="newImprovedAnswers(text)">
+			<input type="text" ng-model="text" placeholder="Improve this answer" style="width:200px;"/>
+			<button type="submit" value="submit" class="btn btn-default">Submit</button>
+		</form>
+			<div ng-show="innerAns" id="improved" ng-repeat="data in improve track by $index">
+				{{data}}
+			</div>
+	</div>
+	</div>
+	<!--div ng-show="innerAnswer" class="accordionn">
+	<a href="javascript:void(0)" class="accordion-head">Discuss</a>
+	<div class="accordion-cont">
+		<form name="improvedAnswersForm" ng-submit="newImprovedAnswers(text)">
+			<input type="text" ng-model="text" placeholder="Improve this answer" style="width:200px;"/>
+			<button type="submit" value="submit" class="btn btn-default">Submit</button>
+		</form>
+			<div ng-show="innerAns" id="improved" ng-repeat="data in improve track by $index">
+				{{data}}
+			</div>
+	</div>
+	</div-->
+	<div ng-show="innerAnswer" class="accord">
+	<a href="javascript:void(0)" class="accordion-tag">Tag</a>
+	</div>
+</div>
+</div>
+</div>
+	
+<script>
+  $(function(){
+	  $(".accordion").on("click", ".accordion-header", function() {
+		$(this).toggleClass("active").next().toggle();
+ });
+  });
+  </script>
+  <script>
+  $(function(){
+	  $(".accordionn").on("click", ".accordion-head", function() {
+		$(this).toggleClass("active").next().toggle();
+ });
+  });
+  </script>
+</body>
+</html>
+<!--how to add likes binding to a comment using angularjs?
+publishing and subscribing using angularjs-->

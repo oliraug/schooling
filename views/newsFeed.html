@@ -1,0 +1,279 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<base href="http://www.oliraug.com/"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="Olira" value="notranslate"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="http://localhost/oliraug/school/2017/images/olira.png" rel="icon" type="img/png" sizes="16x16"/>
+<link href="http://localhost/oliraug/school/2017/css/least.min.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/transit.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.awdagency.com/wp-content/themes/awdagency/js/jquery.timelinr-0.9.4.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/jquery.inview.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/least.min.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/js/jquery.jInvertScroll.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js" defer="defer"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/app/group.controller.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/app/institution.controller.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/app/App.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/app/course.controller.js"></script>
+<script type="text/javascript" src="http://localhost/oliraug/school/2017/app/subject.controller.js"></script>
+<script src = "C:/node_modules/angular/angular.js"></script>
+<script src = "C:/node_modules/angular-route/angular-route.js"></script>
+ <link href = "C:/wamp/www/oliraug/school/2017/css/jquery-ui.theme.css" rel = "stylesheet" type="text/css" media="screen,handheld" media="screen and(min-width:40.5em)"/>
+<script src = "C:/wamp/www/oliraug/school/2017/js/jquery.min.js"></script>
+<script src = "C:/wamp/www/oliraug/school/2017/js/jquery-ui.js"></script>
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+    background-color:gray;
+    font-family: arial
+}
+
+.box{
+    margin:0 10%;
+    height: 630px;
+    overflow: hidden;
+    padding: 10px 0 40px 60px
+}
+
+.box ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.5s linear;
+    top:0
+}
+
+.box ul:last-of-type{top:80px}
+
+.box ul:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border:1px dashed #fff;
+    position: absolute;
+    top:0;
+    left:30px
+}
+
+.box ul li{
+    margin: 20px 60px 60px;
+    position: relative;
+    padding: 10px 20px;
+    background:rgba(255, 255, 255, 0.3);
+    color:#fff;
+    border-radius: 10px;
+    line-height: 20px;
+    width: 35%
+}
+
+
+.box ul li > span{
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border:1px solid #fff;
+    position: absolute;
+    top:0;
+    left:-30px
+}
+
+.box ul li > span:before,.box ul li > span:after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:#ff6d6d;
+    border:2px solid #fff;
+    position: absolute;
+    left:-7.5px
+}
+
+.box ul li > span:before{top:-10px}
+.box ul li > span:after{top:95%}
+
+.box .title{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px
+}
+
+.box .info:first-letter{text-transform: capitalize;line-height: 1.7}
+
+.box .name{
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: right;
+    margin-right: 20px
+}
+
+
+.box .time span{
+    position: absolute;
+    left: -100px;
+    color:#fff;
+    font-size:80%;
+    font-weight: bold;
+}
+.box .time span:first-child{top:-16px}
+.box .time span:last-child{top:94%}
+
+
+.arrow{
+    position: absolute;
+    top: 105%;
+    left: 22%;
+    cursor: pointer;
+  height:20px;
+  width:20px
+}
+
+.arrow:hover{
+    -webkit-animation: arrow 1s linear infinite;
+       -moz-animation: arrow 1s linear infinite;
+         -o-animation: arrow 1s linear infinite;
+            animation: arrow 1s linear infinite;
+}
+
+.box ul:last-of-type .arrow{
+    position: absolute;
+    top: 105%;
+    left: 22%;
+    transform: rotateX(180deg);
+    cursor: pointer;
+}
+
+svg{
+    width: 20px;
+    height: 20px
+}
+
+@keyframes arrow{
+    0%,100%{
+        top:105%
+    }
+    50%{
+        top:106%
+    }
+}
+
+@-webkit-keyframes arrow{
+    0%,100%{
+        top:105%
+    }
+    50%{
+        top:106%
+    }
+}
+
+@-moz-keyframes arrow{
+    0%,100%{
+        top:105%
+    }
+    50%{
+        top:106%
+    }
+}
+
+@-o-keyframes arrow{
+    0%,100%{
+        top:105%
+    }
+    50%{
+        top:106%
+    }
+}
+</style>	
+</head>
+<body>
+<div class="box">
+            <ul id="first-list">
+                <li>
+                    <span></span>
+                    <div class="title">comment #01</div>
+                    <div class="info">the best animation , the best toturials you would ever see .</div>
+                    <div class="name">- dr. mohamed -</div>
+                    <div class="time">
+                        <span>JUN, 17<sup>th</sup></span>
+                        <span>12:00 AM</span>
+                    </div>
+                </li>
+                <!--li>
+                    <span></span>
+                    <div class="title">summery #01</div>
+                    <div class="info">the best animation , the best toturials you would ever see here only . you can learn how to animate and how to use SVG . even else you can add your own animations .</div>
+                    <div class="name">- eng. amr -</div>
+                    <div class="time">
+                        <span>JUN, 29<sup>th</sup></span>
+                        <span>11:36 AM</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">comment #02</div>
+                    <div class="info">the best animation , the best toturials you would ever see . what about canvas ?? do you like it ..</div>
+                    <div class="name">- dr. ahmed -</div>
+                    <div class="time">
+                        <span>FEB, 2<sup>nd</sup></span>
+                        <span>02:00 PM</span>
+                    </div>
+                </li-->
+                
+                
+            </ul>
+                
+               
+            
+            <ul id="second-list">
+                <li>
+                    <span></span>
+                    <div class="title">comment #03</div>
+                    <div class="info">the best animation , the best toturials you would ever see .</div>
+                    <div class="name">- mohamed -</div>
+                    <div class="time">
+                        <span>MAR, 21<sup>st</sup></span>
+                        <span>03:49 PM</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">summery #02</div>
+                    <div class="info">the best animation , the best toturials you would ever see here only . you can learn how to animate and how to use SVG . even else you can add your own animations .</div>
+                    <div class="name">- mohamed -</div>
+                    <div class="time">
+                        <span>MAY, 13<sup>rd</sup></span>
+                        <span>09:23 AM</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">comment #04</div>
+                    <div class="info">the best animation , the best toturials you would ever see . what about canvas ?? do you like it ..</div>
+                    <div class="name">- mohamed -</div>
+                    <div class="time">
+                        <span>OCT, 15<sup>th</sup></span>
+                        <span>08:30 PM</span>
+                    </div>
+                </li>
+                
+                
+            </ul>
+            
+            <script src="JavaScript/timeline-V2.js"></script>
+        </div>
+</body>
+</html>
